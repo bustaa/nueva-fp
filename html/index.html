@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portal de Evento Sostenibles</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <div class="nav-header">
-                <div class="nav-titulo">Gestión de Eventos Sostenibles</div>
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </nav>
-                <button class="btn-acceder">Acceder</button>
-            </div>
-            <section class="cabezera-main">
-                <div class="titulo">
-                    <h1>Organiza y Gestiona<br>Eventos Sostenibles</h1>
-                    <p class="texto-titulo">Nuestra plataforma te ayuda a planificar y<br> coordinar eventos sostenibles con facilidad.</p>
-                    <button class="btn-empezar">Empezar</button>
-                </div>
-                <img class="img-cabezera" src="images/imagen_cabezera.png" alt="Imagen de Eventos Sostenibles">
-            </section>
-        </header>
-        <section class="eventos">
-            <div class="header-carrusel">
-                <h2>Proximos Eventos</h2>
-                <a href="eventos.html">Ver Todos</a>
-            </div>
-            <div class="carrusel">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Evento Sostenibles</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav-header">
+            <div class="nav-titulo">Gestión de Eventos Sostenibles</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="btn-acceder">Acceder</button>
+        </div>
+        <section class="cabezera-main">
+            <div class="titulo">
+                <h1>Organiza y Gestiona<br>Eventos Sostenibles</h1>
+                <p class="texto-titulo">Nuestra plataforma te ayuda a planificar y<br> coordinar eventos sostenibles con
+                    facilidad.</p>
+                <button class="btn-empezar">Empezar</button>
             </div>
+            <img class="img-cabezera" src="images/imagen_cabezera.png" alt="Imagen de Eventos Sostenibles">
         </section>
-        <footer>
-            &copy; Portal de Eventos Sostenibles 2025
-        </footer>
-    </body>
+    </header>
+    <section class="eventos">
+        <div class="header-carrusel">
+            <h2>Proximos Eventos</h2>
+            <a href="eventos.html">Ver Todos</a>
+        </div>
+        <div class="carrusel-container">
+            <button class="carrusel-btn izquierda">&#10094;</button>
+            <div class="carrusel" id="carrusel"></div>
+            <button class="carrusel-btn derecha">&#10095;</button>
+            <div class="carrusel-puntos" id="puntos"></div>
+        </div>
+    </section>
+    <footer>
+        &copy; Portal de Eventos Sostenibles 2025
+    </footer>
+    <script src="js/carrusel.js"></script>
+</body>
+
 </html>

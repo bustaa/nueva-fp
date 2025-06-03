@@ -111,14 +111,16 @@ h1 {
 
 .eventos {
     width: 100%;
-    height: 420px;
+    height: auto;
+    background: #fff;
+    padding-bottom: 0;
 }
 
 .header-carrusel h2 {
     margin: 0;
     color: #1F4A32;
     font-size: 28px;
-    padding-left: 20px;
+    font-weight: 650;
 }
 
 .header-carrusel {
@@ -126,9 +128,147 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    max-width: 1400px;
+    padding: 20px 40px 0 40px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.header-carrusel a {
+    text-decoration: none;
+    color: #1F4A32;
+    font-size: 18px;
+    font-weight: 650;
+    padding-right: 0;
+}
+
+.carrusel {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 20px 0;
+    transition: transform 0.3s ease-out;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.carrusel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    clip-path: inset(0); /* Asegura que no se vean los elementos fuera del contenedor */
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #1F4A32;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(31,74,50,0.10);
+}
+
+.carrusel-btn:hover {
+    background-color: #E6EDE0;
+    color: #2d6747;
+}
+
+.carrusel-btn.izquierda {
+    left: 20px;
+}
+
+.carrusel-btn.derecha {
+    right: 20px;
+}
+
+.carrusel-puntos {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 12px;
+}
+
+.punto {
+    width: 12px;
+    height: 12px;
+    background-color: #C7D6AF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.punto.activo {
+    background-color: #1F4A32;
+}
+
+.evento-tarjeta {
+    min-width: 380px;
+    max-width: 380px;
+    flex: 0 0 auto;
+    margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #F8F9EE;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    box-shadow: none;
+    transition: opacity 0.3s ease-out;
+    opacity: 1;
+}
+
+.evento-tarjeta:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.evento-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.evento-contenido {
+    padding: 18px 18px 10px 18px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: #F8F9EE;
+}
+
+.evento-titulo {
+    margin: 0 0 8px 0;
+    color: #1F4A32;
+    font-size: 17px;
+    font-weight: 650;
+}
+
+.evento-fecha {
+    color: #1F4A32;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.evento-boton {
+    display: none; /* Oculto porque en la imagen no aparece */
 }
 
 footer {
@@ -136,12 +276,7 @@ footer {
     color: #1F4A32;
     padding: 20px;
     text-align: center;
-}
-
-.header-carrusel a {
-    text-decoration: none;
-    color: #1F4A32;
-    font-size: 20px;
-    font-weight: 650;
-    padding-right: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 40px;
 }
