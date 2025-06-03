@@ -49,9 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // Ordenar los eventos en grupos de 3
     function renderizarEventos() {
-        carrusel.innerHTML = ''; // Limpiar el carrusel
+        carrusel.innerHTML = '';
         eventos.forEach((evento, index) => {
             const tarjeta = document.createElement('div');
             tarjeta.className = 'evento-tarjeta';
@@ -72,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const eventosPorGrupo = 3;
     const totalGrupos = Math.ceil(totalEventos / eventosPorGrupo);
 
-    // Crea los puntos
     for (let i = 0; i < totalGrupos; i++) {
         const punto = document.createElement('div');
         punto.className = 'punto';
@@ -98,10 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const grupoActual = Math.floor(posicionActual / eventosPorGrupo);
         
-        // Aplicar transformación
         carrusel.style.transform = `translateX(${-posicionActual * anchoTarjeta}px)`;
 
-        // Actualizar visibilidad sin transiciones abruptas
         const tarjetas = document.querySelectorAll('.evento-tarjeta');
         tarjetas.forEach((tarjeta, index) => {
             const perteneceAlGrupoActual = Math.floor(index / eventosPorGrupo) === grupoActual;
