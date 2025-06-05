@@ -1,4 +1,4 @@
-package main;
+package main.java.com.indra.eventossostenibles;
 
 public class Ubicacion {
     private String tipo;

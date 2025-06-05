@@ -1,4 +1,4 @@
-package main;
+package main.java.com.indra.eventossostenibles;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
