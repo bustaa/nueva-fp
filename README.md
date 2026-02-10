@@ -74,4 +74,4 @@ Este proyecto forma parte del módulo de formación en empresa del primer curso 
 - 'portal_eventos_sostenibles.jpg': Captura de la web funcionando.
 - 'grafo_ramas_git.jpg': Imagen del grafo de ramas de Git.
 
-
+![Contenido](portal_eventos_sostenibles.png)
